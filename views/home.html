@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="chatImage.jpg">
+    <title>Home</title>
+    <link rel="stylesheet" href="homeStyles.css">
+    <script src="axios.js" async></script>
+    <script src="homeScripts.js" defer></script>
+</head>
+<body>
+    <h1 id="header">WeTalk</h1>
+    <p id="error" styles="display: none"></p>
+    <form id="create-form">
+        <h1>Create Group</h1>
+        <p>
+            <label for="name">Chat Group Name</label>
+            <input type="text" required id="createName" name="name" placeholder="Name of group">
+        </p>
+        <p>
+            <label for="createPersonName">Your Name</label>
+            <input type="text" required id="createPersonName" placeholder="Your name">
+        </p>
+        <p>Must be all lowercase</p>
+        <button>Submit</button>
+    </form>
+    <form id="join-form">
+        <h1>Join Group</h1>
+        <p>
+            <label for="name">Chat Group Name</label>
+            <input type="text" required id="joinName" name="name" placeholder="Name of group">
+        </p>
+        <p>
+            <label for="joinPersonName">Your Name</label>
+            <input type="text" id="joinPersonName" required placeholder="Your name">
+        </p>
+        <p>Must be all lowercase</p>
+        <button>Submit</button>
+    </form>
+</body>
+<footer style="text-align: center;">For more information or questions, email "ishan.karmakar24@gmail.com"</footer>
+</html>

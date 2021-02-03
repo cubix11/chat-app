@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'self'">
+    <title>Chat App</title>
+    <link rel="icon" href="chatImage.jpg" type="image/gif">
+    <script src="socket.io.js"></script>
+    <script src="jquery.js" async></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <audio id="sound"><source src="beep.mp3" type="audio/mpeg"></audio>
+    <span id="collection" style="display: none;"><%= collection %></span>
+    <span id="initChat" style="display: none;"><%= JSON.stringify(initChat) %></span>
+    <h1 id="header">WeTalk</h1>
+    <h2 id="groupName"></h2>
+    <div id="error"></div>
+    <div id="content">
+        <div id="mario-chat">
+            <div id="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <form id="chat-form">
+                <input type="text" id="handle" required placeholder="Name" />
+                <input type="text" id="message" required placeholder="Message" />
+                <button id="send">Send</button>
+            </form>
+            <button id="audio" value="audio-on">Disable Notifications Sound</button>
+            <button id="lock-chat" value="lock-chat">Lock Chat Group</button>
+        </div>
+        <ul id="inChat"></ul>
+    </div>
+</body>
+<footer>For more information or questions, email "ishan.karmakar24@gmail.com"</footer>
+</html>

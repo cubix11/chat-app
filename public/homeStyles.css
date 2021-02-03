@@ -1,0 +1,45 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    justify-content: center;
+    text-align: center;
+}
+form {
+    display: inline-block;
+    text-align: center;
+    border: 2px dotted blue;
+    padding: 10px;
+    overflow: auto;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input {
+    height: 125%;
+}
+
+#error {
+    display: inline-block;
+    background-color: red;
+    padding: 10px 0px 10px 0px;
+    display: none;
+    font-family: monospace, sans-serif;
+}
+
+footer {
+    text-align: center;
+    clear:both;
+    position: fixed;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    color: white;
+}
+
+#header {
+    font-size: 350%;
+}
