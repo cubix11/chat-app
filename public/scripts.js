@@ -14,7 +14,7 @@ const name = search.get('name');
 const errorElem = document.getElementById('error');
 const groupName = search.get('groupName');
 document.getElementById('groupName').innerHTML = groupName;
-document.getElementById('groupName').addEventListener('click', event => window.prompt('Copy using Ctrl + C', ( `http://${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}?joinGroupName=${groupName}` )));
+document.getElementById('groupName').addEventListener('click', event => window.prompt('Copy using Ctrl + C', ( `http://${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}?joinGroupName=${groupName.replaceAll(' ', '%20')}` )));
 lockChat.addEventListener('click', () => {
     if(lockChat.value === 'lock-chat') {
         const lockConfirm = confirm('Are you sure you want to lock the chat?');

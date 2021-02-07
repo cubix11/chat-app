@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 });
 app.get('/:name', (req, res) => {
+    removeEmptyCollections()
     const collection = db.get(req.params.name);
     collection.find().then(messages => {
         const newMessages = [...messages];
